@@ -2,7 +2,7 @@
 
 A premium, interactive developer portfolio built to showcase full-stack projects, responsive UI designs, and technical skills. It features a unique command-line terminal emulator, micro-animations, and a next-level glassmorphism design system.
 
-![Portfolio Preview](./public/jack-sparrow.jpg)
+![Portfolio Preview](./image.png)
 
 ## 🚀 Key Features
 
