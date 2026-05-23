@@ -68,15 +68,15 @@ export const portfolioData: PortfolioData = {
     lastName: "Shalinda",
     fullName: "R.M. Thineth Shalinda",
     title: "Full Stack Developer",
-    subtitle: "CS Undergraduate Student",
+    subtitle: "SE Undergraduate Student",
     age: getAge(), // Dynamic age calculator
     bioParagraphs: [
-      `I am a passionate Full Stack Developer and a Computer Science undergraduate student at ICBT Colombo, currently ${getAge()} years old. I approach software engineering with a meticulous mindset—striving for optimized logic, responsive web layouts, and reliable relational databases.`,
+      `I am a passionate Full Stack Developer and a Software Engineering undergraduate student at ICBT Colombo, currently ${getAge()} years old. I approach software engineering with a meticulous mindset—striving for optimized logic, responsive web layouts, and reliable relational databases.`,
       "I own the full lifecycle of application building, including desktop systems, mobile platforms, and interactive responsive web applications. I am highly driven by practical, real-world development challenges.",
     ],
     aboutParagraphs: [
       "My journey into software development began with a deep curiosity for how complex systems operate behind the scenes. Since then, I have immersed myself in learning modern programming paradigms and building scalable, full-stack applications from the ground up.",
-      "As a Computer Science undergraduate, I consistently bridge the gap between rigorous academic theory and practical, hands-on coding. Whether I'm architecting a complex relational database or crafting smooth micro-animations for a UI, my primary focus is always on delivering high-quality, maintainable, and efficient code."
+      "As a Software Engineering undergraduate, I consistently bridge the gap between rigorous academic theory and practical, hands-on coding. Whether I'm architecting a complex relational database or crafting smooth micro-animations for a UI, my primary focus is always on delivering high-quality, maintainable, and efficient code."
     ],
     avatarUrl: "/profile.jpeg", // Located at public/profile.jpeg
     resumeUrl: "#",
@@ -242,11 +242,11 @@ export const portfolioData: PortfolioData = {
   ],
   education: [
     {
-      degree: "BSc (Hons) in Computer Science",
+      degree: "BSc (Hons) in Software Engineering",
       institution: "ICBT Colombo",
       period: "Registered: 2024/05/24 - Present (3 Years Remaining)",
       description:
-        "Actively developing core expertise in software architecture, algorithm designs, data structures, and enterprise database systems management.",
+        "Actively developing core expertise in software architecture, algorithm designs, data structures, and enterprise software systems management.",
     },
   ],
 };
