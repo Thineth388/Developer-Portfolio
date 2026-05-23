@@ -83,7 +83,7 @@ export const portfolioData: PortfolioData = {
   },
   socialLinks: {
     email: "thinethshalindha1990@gmail.com",
-    github: "https://github.com/Thineth-devops",
+    github: "https://github.com/Thineth388",
     linkedin: "https://www.linkedin.com/feed/",
     whatsapp: "https://wa.me/94762519388", // Sri Lanka (+94) whatsapp direct link format
     phone: "0762519388",
@@ -110,7 +110,7 @@ export const portfolioData: PortfolioData = {
         "A premium class management program designed for educational institutes to schedule lectures, track student records, coordinate faculty timetables, and handle data storage.",
       categories: ["Web", "Full Stack"],
       tech: ["React", "Node.js", "Express", "SQLite"],
-      githubUrl: "https://github.com/Thineth388/CMS-System",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       imageUrl: "/CMS-System.png",
       features: [
@@ -127,7 +127,7 @@ export const portfolioData: PortfolioData = {
         "A premium inventory control and billing application streamlining product stock tracking, checkout, retail transactions, and automated daily reporting.",
       categories: ["Web", "Full Stack"],
       tech: ["React", "Next.js", "Tailwind CSS", "SQLite"],
-      githubUrl: "https://github.com/Thineth388/nextpos-system",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       imageUrl: "/nextpos-system.png",
       features: [
@@ -144,7 +144,7 @@ export const portfolioData: PortfolioData = {
         "A premium cross-platform mobile application for critical environment monitoring. Features real-time temperature tracking, animated telemetry charts, and threshold alerts.",
       categories: ["Mobile", "IoT"],
       tech: ["React Native", "Expo", "ChartKit"],
-      githubUrl: "https://github.com/Thineth388/Smart-Temp-Monitor",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       imageUrl: "/Smart-Temp-Monitor.png",
       features: [
@@ -177,7 +177,7 @@ export const portfolioData: PortfolioData = {
         "A secure academic web interface for lecturers and student cohorts to log, verify, and view class attendances, featuring automated reports and visual warning alerts.",
       categories: ["Web", "Full Stack"],
       tech: ["React", "Node.js", "Express", "MySQL"],
-      githubUrl: "https://github.com/Thineth388/University-Attendance-System",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       imageUrl: "/University-Attendance-System.png",
       features: [
@@ -210,7 +210,7 @@ export const portfolioData: PortfolioData = {
         "A beautifully styled pirate-themed e-commerce platform incorporating shopping carts, catalog filtering, responsive grids, and clean checkout states.",
       categories: ["Web"],
       tech: ["Next.js", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/Thineth388/jack-sparrow-site",
+      githubUrl: "https://github.com/Thineth388",
       liveUrl: "https://jack-sparrow-site.vercel.app",
       featured: true,
       imageUrl: "/jack-sparrow.jpg",
@@ -228,7 +228,7 @@ export const portfolioData: PortfolioData = {
         "A web application regulating medical patient records, doctor channeling sessions, pharmaceutical item stock, and secure clinic history logs.",
       categories: ["Web", "Database"],
       tech: ["React", "PHP", "MySQL", "CSS"],
-      githubUrl: "https://github.com/Thineth388/Modern-Medicare-Management-System",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       imageUrl: "/medicare.png",
       features: [
