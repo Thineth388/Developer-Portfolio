@@ -210,7 +210,8 @@ export const portfolioData: PortfolioData = {
         "A beautifully styled pirate-themed e-commerce platform incorporating shopping carts, catalog filtering, responsive grids, and clean checkout states.",
       categories: ["Web"],
       tech: ["Next.js", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/Thineth-devops/jack-sparrow-site",
+      githubUrl: "https://github.com/Thineth388/jack-sparrow-site",
+      liveUrl: "https://jack-sparrow-site.vercel.app",
       featured: true,
       imageUrl: "/jack-sparrow.jpg",
       features: [

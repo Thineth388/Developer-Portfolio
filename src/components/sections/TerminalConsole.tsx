@@ -1,20 +1,51 @@
 "use client";
 
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
+import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading";
 import { portfolioData } from "@/data/portfolio";
+
+const TypewriterText = ({ text, delay = 0, speed = 10, skip = false }: { text: string, delay?: number, speed?: number, skip?: boolean }) => {
+  const [displayedText, setDisplayedText] = useState(skip ? text : "");
+
+  useEffect(() => {
+    if (skip) {
+      setDisplayedText(text);
+      return;
+    }
+    
+    let i = 0;
+    setDisplayedText("");
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        setDisplayedText((prev) => {
+          if (prev.length >= text.length) {
+            clearInterval(interval);
+            return text;
+          }
+          return text.slice(0, prev.length + 1);
+        });
+      }, speed);
+      return () => clearInterval(interval);
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [text, delay, speed, skip]);
+
+  return <span>{displayedText}</span>;
+};
 
 interface TerminalLine {
   text: string;
   type: "input" | "output" | "error" | "system";
+  skipTypewriter?: boolean;
 }
 
 export default function TerminalConsole() {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<TerminalLine[]>([
-    { text: "Thineth Developer Terminal [Version 2.6.0]", type: "system" },
-    { text: "Copyright (c) 2026 R.M. Thineth Shalinda. All rights reserved.", type: "system" },
-    { text: "Type 'help' and press Enter to see a list of commands.", type: "system" },
+    { text: "Thineth Developer Terminal [Version 2.6.0]", type: "system", skipTypewriter: true },
+    { text: "Copyright (c) 2026 R.M. Thineth Shalinda. All rights reserved.", type: "system", skipTypewriter: true },
+    { text: "Type 'help' and press Enter to see a list of commands.", type: "system", skipTypewriter: true },
   ]);
 
   const terminalEndRef = useRef<HTMLDivElement>(null);
@@ -40,7 +71,7 @@ export default function TerminalConsole() {
     }
 
     // Add user's command line to history
-    const userLine: TerminalLine = { text: `thineth@shalinda:~$ ${trimmed}`, type: "input" };
+    const userLine: TerminalLine = { text: `thineth@shalinda:~$ ${trimmed}`, type: "input", skipTypewriter: true };
     let responseLines: TerminalLine[] = [];
 
     // Map command variations to canonical command values
@@ -146,9 +177,11 @@ export default function TerminalConsole() {
         </p>
 
         {/* Terminal Shell Window */}
-        <div
+        <motion.div
           onClick={focusInput}
-          className="rounded-2xl border border-zinc-800 bg-zinc-950/80 shadow-2xl glass-panel glass-panel-glow overflow-hidden cursor-text"
+          drag
+          dragConstraints={{ left: -50, right: 50, top: -20, bottom: 50 }}
+          className="rounded-2xl border border-zinc-800 bg-zinc-950/80 shadow-2xl glass-panel glass-panel-glow overflow-hidden cursor-text relative"
         >
           {/* Header Panel */}
           <div className="flex items-center justify-between border-b border-zinc-900 bg-zinc-950/40 px-4 py-3 select-none">
@@ -171,7 +204,7 @@ export default function TerminalConsole() {
 
               return (
                 <div key={index} className={`whitespace-pre-wrap break-words ${textClass}`}>
-                  {line.text}
+                  <TypewriterText text={line.text} skip={line.skipTypewriter || line.type === "input"} speed={15} />
                 </div>
               );
             })}
@@ -195,7 +228,7 @@ export default function TerminalConsole() {
             
             <div ref={terminalEndRef} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
