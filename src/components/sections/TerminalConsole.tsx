@@ -14,7 +14,6 @@ const TypewriterText = ({ text, delay = 0, speed = 10, skip = false }: { text: s
       return;
     }
     
-    let i = 0;
     setDisplayedText("");
     const timeout = setTimeout(() => {
       const interval = setInterval(() => {
