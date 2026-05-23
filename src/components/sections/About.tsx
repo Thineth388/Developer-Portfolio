@@ -2,7 +2,7 @@ import SectionHeading from "../SectionHeading";
 import { portfolioData } from "@/data/portfolio";
 
 export default function About() {
-  const { bioParagraphs } = portfolioData.personalInfo;
+  const { aboutParagraphs } = portfolioData.personalInfo;
   const education = portfolioData.education;
 
   return (
@@ -15,7 +15,7 @@ export default function About() {
       <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] items-start">
         {/* Paragraphs Panel */}
         <div className="space-y-6 text-base leading-relaxed text-zinc-400 sm:text-lg">
-          {bioParagraphs.map((para, idx) => (
+          {aboutParagraphs.map((para, idx) => (
             <p key={idx}>
               {para}
             </p>

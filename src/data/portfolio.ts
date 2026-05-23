@@ -45,6 +45,7 @@ export interface PortfolioData {
     subtitle: string;
     age: number;
     bioParagraphs: string[];
+    aboutParagraphs: string[];
     avatarUrl: string;
     resumeUrl?: string;
   };
@@ -72,6 +73,10 @@ export const portfolioData: PortfolioData = {
     bioParagraphs: [
       `I am a passionate Full Stack Developer and a Computer Science undergraduate student at ICBT Colombo, currently ${getAge()} years old. I approach software engineering with a meticulous mindset—striving for optimized logic, responsive web layouts, and reliable relational databases.`,
       "I own the full lifecycle of application building, including desktop systems, mobile platforms, and interactive responsive web applications. I am highly driven by practical, real-world development challenges.",
+    ],
+    aboutParagraphs: [
+      "My journey into software development began with a deep curiosity for how complex systems operate behind the scenes. Since then, I have immersed myself in learning modern programming paradigms and building scalable, full-stack applications from the ground up.",
+      "As a Computer Science undergraduate, I consistently bridge the gap between rigorous academic theory and practical, hands-on coding. Whether I'm architecting a complex relational database or crafting smooth micro-animations for a UI, my primary focus is always on delivering high-quality, maintainable, and efficient code."
     ],
     avatarUrl: "/profile.jpeg", // Located at public/profile.jpeg
     resumeUrl: "#",
