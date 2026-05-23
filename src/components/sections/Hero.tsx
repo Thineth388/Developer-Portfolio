@@ -75,7 +75,7 @@ export default function Hero() {
 
         <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
           {bioParagraphs.map((para, i) => (
-            <p key={i}>{para}</p>
+            <p key={i} className="text-justify">{para}</p>
           ))}
         </div>
 

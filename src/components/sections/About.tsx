@@ -16,7 +16,7 @@ export default function About() {
         {/* Paragraphs Panel */}
         <div className="space-y-6 text-base leading-relaxed text-zinc-400 sm:text-lg">
           {aboutParagraphs.map((para, idx) => (
-            <p key={idx}>
+            <p key={idx} className="text-justify">
               {para}
             </p>
           ))}

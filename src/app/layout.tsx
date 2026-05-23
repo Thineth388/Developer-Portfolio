@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   description: `Portfolio of ${fullName} — ${title} & ${subtitle}`,
 };
 
-export const viewport = {
-  width: "1024",
-};
+
 
 
 export default function RootLayout({
