@@ -141,7 +141,7 @@ export const portfolioData: PortfolioData = {
   socialLinks: {
     email: "thinethshalindha1990@gmail.com",
     github: "https://github.com/Thineth388",
-    linkedin: "", // Hidden until ready
+    linkedin: "https://www.linkedin.com/in/thineth-shalindha-8b762640b/",
     whatsapp: "https://wa.me/94762519388", // Sri Lanka (+94) whatsapp direct link format
     phone: "0762519388",
     web3formsKey: "484ad920-29c0-40f7-9a03-d3edf39ca577",
