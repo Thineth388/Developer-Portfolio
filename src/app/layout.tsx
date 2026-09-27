@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const { fullName, title, subtitle } = portfolioData.personalInfo;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thineth-portfolio.pages.dev"),
+  metadataBase: new URL("https://thinethshalinda.pages.dev"),
   title: `${fullName} | ${title}`,
   description: `Portfolio of ${fullName} — ${title} & ${subtitle}. Software Engineering undergraduate at ICBT Colombo specializing in full-stack web and systems development.`,
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${fullName} | ${title}`,
     description: `Portfolio of ${fullName} — ${title} & ${subtitle}`,
-    url: "https://thineth-portfolio.pages.dev",
+    url: "https://thinethshalinda.pages.dev",
     siteName: `${fullName} Portfolio`,
     images: [
       {
