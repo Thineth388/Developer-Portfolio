@@ -140,14 +140,16 @@ export default function Contact() {
                 >
                   GitHub
                 </a>
-                <a
-                  href={linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-2.5 text-xs font-semibold text-zinc-300 transition-all duration-300 hover:border-cyan-500/40 hover:bg-zinc-900 hover:text-white"
-                >
-                  LinkedIn
-                </a>
+                {linkedin && linkedin.trim() !== "" && (
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-2.5 text-xs font-semibold text-zinc-300 transition-all duration-300 hover:border-cyan-500/40 hover:bg-zinc-900 hover:text-white"
+                  >
+                    LinkedIn
+                  </a>
+                )}
               </div>
             </div>
           </div>

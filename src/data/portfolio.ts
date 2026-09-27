@@ -11,6 +11,63 @@ export const getAge = (): number => {
   return age;
 };
 
+// Dynamic helper to calculate 4-Year UGC Degree progress (Registered: May 24, 2024)
+export const getEducationDetails = () => {
+  const startDate = new Date("2024-05-24");
+  const today = new Date();
+
+  // Total elapsed months since May 2024
+  let monthsElapsed =
+    (today.getFullYear() - startDate.getFullYear()) * 12 +
+    (today.getMonth() - startDate.getMonth());
+  if (today.getDate() < startDate.getDate()) {
+    monthsElapsed--;
+  }
+
+  // 4-year UGC degree = 48 months (8 semesters, ~6 months per semester)
+  const totalMonths = 48;
+
+  if (monthsElapsed >= totalMonths) {
+    return {
+      period: "2024 - 2028 (Graduated)",
+      statusText: "Graduated Software Engineer",
+      yearSem: "Graduated",
+      remainingText: "Completed",
+    };
+  }
+
+  const currentSemesterNumber = Math.min(8, Math.max(1, Math.floor(monthsElapsed / 6) + 1));
+  const currentYear = Math.min(4, Math.ceil(currentSemesterNumber / 2));
+  const currentSemesterInYear = currentSemesterNumber % 2 === 1 ? 1 : 2;
+
+  const yearNames = ["1st", "2nd", "3rd", "4th"];
+  const semNames = ["1st", "2nd"];
+
+  const yearLabel = currentYear === 4 ? "Final Year" : `${yearNames[currentYear - 1]} Year`;
+  const semLabel = `${semNames[currentSemesterInYear - 1]} Sem`;
+
+  const monthsRemaining = totalMonths - monthsElapsed;
+  let remainingText = "";
+  if (monthsRemaining > 24) {
+    remainingText = "~2.5 - 3 Years Remaining";
+  } else if (monthsRemaining > 18) {
+    remainingText = "~1.5 - 2 Years Remaining";
+  } else if (monthsRemaining > 12) {
+    remainingText = "~1 - 1.5 Years Remaining";
+  } else if (monthsRemaining > 6) {
+    remainingText = "Final Year (~6 - 12 Months Remaining)";
+  } else {
+    remainingText = "Final Semester (< 6 Months Remaining)";
+  }
+
+  return {
+    period: `Registered: 2024/05/24 - Present (${yearLabel}, ${semLabel} • ${remainingText})`,
+    statusText: `Undergraduate Student (BSc Hons SE - ${yearLabel})`,
+    yearSem: `${yearLabel}, ${semLabel}`,
+    remainingText,
+  };
+};
+
 export interface Project {
   title: string;
   description: string;
@@ -52,7 +109,7 @@ export interface PortfolioData {
   socialLinks: {
     email: string;
     github: string;
-    linkedin: string;
+    linkedin?: string;
     whatsapp: string;
     phone: string;
     web3formsKey?: string;
@@ -84,7 +141,7 @@ export const portfolioData: PortfolioData = {
   socialLinks: {
     email: "thinethshalindha1990@gmail.com",
     github: "https://github.com/Thineth388",
-    linkedin: "https://www.linkedin.com/feed/",
+    linkedin: "", // Hidden until ready
     whatsapp: "https://wa.me/94762519388", // Sri Lanka (+94) whatsapp direct link format
     phone: "0762519388",
     web3formsKey: "484ad920-29c0-40f7-9a03-d3edf39ca577",
@@ -161,7 +218,7 @@ export const portfolioData: PortfolioData = {
         "An IoT-enabled Android application built to collect moisture, humidity, and temperature levels directly from field sensors, presenting analytical graphs to farmers.",
       categories: ["Mobile", "IoT"],
       tech: ["Android Studio", "Kotlin", "Firebase"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       features: [
         "Real-time sensor telemetry integration with Firebase RTDB",
@@ -194,7 +251,7 @@ export const portfolioData: PortfolioData = {
         "An intelligent web app using computer vision models to identify facial expressions and dynamically curate custom music playlists based on the user's emotional state.",
       categories: ["AI/ML", "Web"],
       tech: ["Python", "TensorFlow", "OpenCV", "React"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/Thineth388",
       featured: true,
       features: [
         "Browser-based webcam capture and framing pipeline",
@@ -243,10 +300,10 @@ export const portfolioData: PortfolioData = {
   education: [
     {
       degree: "BSc (Hons) in Software Engineering",
-      institution: "ICBT Colombo",
-      period: "Registered: 2024/05/24 - Present (3 Years Remaining)",
+      institution: "ICBT Colombo (UGC Approved 4-Year Degree)",
+      period: getEducationDetails().period,
       description:
-        "Actively developing core expertise in software architecture, algorithm designs, data structures, and enterprise software systems management.",
+        "UGC recognized 4-year honours degree program. Actively developing core expertise in software architecture, algorithm designs, data structures, and enterprise software systems management.",
     },
   ],
 };

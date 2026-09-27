@@ -6,6 +6,7 @@ import TerminalConsole from "@/components/sections/TerminalConsole";
 import Contact from "@/components/sections/Contact";
 import ScrollReveal from "@/components/ScrollReveal";
 
+
 export default function Home() {
   return (
     <>

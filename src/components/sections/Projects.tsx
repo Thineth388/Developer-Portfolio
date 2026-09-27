@@ -174,12 +174,14 @@ export default function Projects() {
             {/* Modal Image Header */}
             {selectedProject.imageUrl && (
               <div className="relative w-full h-56 sm:h-64 overflow-hidden rounded-xl border border-zinc-900 mb-6 bg-zinc-950">
-                <img
+                <Image
                   src={selectedProject.imageUrl}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover object-center"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-40 z-10" />
               </div>
             )}
 

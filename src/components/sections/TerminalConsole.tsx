@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading";
-import { portfolioData } from "@/data/portfolio";
+import { portfolioData, getEducationDetails, getAge } from "@/data/portfolio";
 
 const TypewriterText = ({ text, delay = 0, speed = 10, skip = false }: { text: string, delay?: number, speed?: number, skip?: boolean }) => {
   const [displayedText, setDisplayedText] = useState(skip ? text : "");
@@ -111,9 +111,9 @@ export default function TerminalConsole() {
       case "about":
         responseLines = [
           { text: `Name: R.M. Thineth Shalinda`, type: "output" },
-          { text: `Age: ${portfolioData.personalInfo.age} Years`, type: "output" },
-          { text: `Institution: ICBT Colombo`, type: "output" },
-          { text: `Status: Undergraduate Student (CS)`, type: "output" },
+          { text: `Age: ${getAge()} Years`, type: "output" },
+          { text: `Institution: ICBT Colombo (UGC Approved 4-Year Degree)`, type: "output" },
+          { text: `Status: Undergraduate Student (BSc Hons SE - ${getEducationDetails().yearSem})`, type: "output" },
           { text: `Biography: I build desktop softwares, responsive web APIs, and IoT frameworks. My goal is to build secure, scalable code architectures.`, type: "output" },
         ];
         break;
