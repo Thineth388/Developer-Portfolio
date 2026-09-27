@@ -18,8 +18,37 @@ const geistMono = Geist_Mono({
 const { fullName, title, subtitle } = portfolioData.personalInfo;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thineth-portfolio.pages.dev"),
   title: `${fullName} | ${title}`,
-  description: `Portfolio of ${fullName} — ${title} & ${subtitle}`,
+  description: `Portfolio of ${fullName} — ${title} & ${subtitle}. Software Engineering undergraduate at ICBT Colombo specializing in full-stack web and systems development.`,
+  keywords: [
+    "Thineth Shalinda",
+    "Thineth",
+    "R.M. Thineth Shalinda",
+    "Full Stack Developer Sri Lanka",
+    "Software Engineer Portfolio",
+    "ICBT Colombo",
+    "Next.js Developer",
+    "React Developer",
+  ],
+  authors: [{ name: fullName }],
+  creator: fullName,
+  openGraph: {
+    title: `${fullName} | ${title}`,
+    description: `Portfolio of ${fullName} — ${title} & ${subtitle}`,
+    url: "https://thineth-portfolio.pages.dev",
+    siteName: `${fullName} Portfolio`,
+    images: [
+      {
+        url: "/profile.jpeg",
+        width: 800,
+        height: 1000,
+        alt: fullName,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 
