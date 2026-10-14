@@ -1,52 +1,80 @@
-# 🚀 How to Update Your Portfolio (Git Push Guide)
-
-Whenever you want to update your portfolio (add a new project, change your bio, update your skills, or add a CV), follow these simple steps:
-
----
-
-## Step 1: Make Your Changes & Save
-1. Open the file you want to edit (mostly **`src/data/portfolio.ts`**).
-2. Make your edits.
-3. Save the file: Press **`Ctrl + S`**.
+# 📘 Portfolio එක Update කරන සම්පූර්ණ Guide එක (Cheat Sheet)
+> **R.M. Thineth Shalinda | Developer Portfolio**  
+> Live URL: [https://thinethshalinda.pages.dev](https://thinethshalinda.pages.dev)  
+> GitHub Repo: [https://github.com/Thineth388/Developer-Portfolio](https://github.com/Thineth388/Developer-Portfolio)
 
 ---
 
-## Step 2: Open the Terminal
-In VS Code / Antigravity IDE:
-- Press **`Ctrl` + `~`** (the backtick key under Escape).
-- Or from top menu: **Terminal -> New Terminal**.
+## 🎯 සාරාංශය (Quick Summary)
+ඔයාට portfolio එකේ මොනවා හරි වෙනස් කරන්න ඕන වුණාම කරන්න තියෙන්නේ **පියවර 3යි**:
+1. File එක වෙනස් කරලා **Save (Ctrl + S)** කරන්න.
+2. Terminal එක open කරලා **Commands 3** run කරන්න.
+3. **Cloudflare එකෙන් තත්පර 30න් Live Site එක auto-update වෙනවා!**
 
 ---
 
-## Step 3: Run the 3 Magic Commands
+## 🛠️ පියවරෙන් පියවර උපදෙස් (Step-by-Step)
 
-Type these 3 commands one by one, pressing **Enter** after each:
+### පියවර 1: විස්තර වෙනස් කිරීම (Edit & Save)
+* ඔයාගේ විස්තර, Projects, Skills, Contact details තියෙන්නේ මෙතනයි:  
+  📁 **`src/data/portfolio.ts`**
+* අලුත් photos හෝ CV දානවා නම් දාන්න ඕන folder එක:  
+  📁 **`public/`** (උදාහරණයක් විදියට `public/my-cv.pdf`)
+* වෙනස්කම් කරලා ඉවර වෙලා **`Ctrl + S`** ඔබලා Save කරන්න.
 
-### 1️⃣ Step 1: Stage files
+---
+
+### පියවර 2: Terminal එක Open කරගැනීම
+* Keyboard එකෙන් **`Ctrl` + `~`** (Escape key එකට යටින් තියෙන backtick key එක) ඔබන්න.  
+  *(නැත්නම් VS Code උඩ menu එකෙන් **Terminal -> New Terminal** යන්න).*
+
+---
+
+### පියවර 3: මේ Commands 3 එකින් එක Run කරන්න
+
+#### 1️⃣ පළවෙනි Command එක (Stage Changes)
 ```bash
 git add .
 ```
-*(Note: There is a space and a dot `.` after `add`)*
+> 💡 *සටහන: `add` එකට පස්සේ space එකක් සහ තිතක් `.` අනිවාර්යයෙන්ම තියන්න.*
 
-### 2️⃣ Step 2: Commit with a message
+#### 2️⃣ දෙවෙනි Command එක (Commit Message)
 ```bash
-git commit -m "Update my portfolio"
+git commit -m "Update portfolio"
 ```
-*(You can write any short message inside the quotes, e.g. `"Added new project"`)*
+> 💡 *සටහන: කැමති නම් `"Update portfolio"` වෙනුවට `"Added new project"` වගේ ඔයා කරපු දේ ලියන්න පුළුවන්.*
 
-### 3️⃣ Step 3: Push to GitHub & Cloudflare
+#### 3️⃣ තුන්වෙනි Command එක (Push to Cloud)
 ```bash
 git push
 ```
+> 💡 *Enter කරපු ගමන් තත්පර 2කින් GitHub එකට upload වෙයි.*
 
 ---
 
-## 🎉 That's it!
-- Your changes are now on **GitHub**.
-- **Cloudflare Pages** will automatically detect the push, rebuild, and update your live site within **30 seconds**!
-- Check your live site: **https://thinethshalinda.pages.dev/**
+## ⚡ ඊටපස්සේ මොකද වෙන්නේ?
+- ඔයා `git push` කරපු සැනින් **Cloudflare Pages** එකෙන් ඒක හඳුනාගෙන auto-build වෙනවා.
+- **තත්පර 30-45ක්** ඇතුළත ඔයාගේ Live Site එක:  
+  👉 **[https://thinethshalinda.pages.dev](https://thinethshalinda.pages.dev)**  
+  අලුත් වෙනස්කම් එක්ක මුළු ලෝකෙටම live පෙන්නනවා!
 
 ---
 
-## 🛡️ Important Safety Note
-Thanks to `.gitignore`, heavy folders like `node_modules`, `.next`, and build caches are **permanently blocked** from being uploaded. Only your clean source code will ever be pushed!
+## 🛡️ ආරක්ෂාව (Safety & Protection)
+* **`.gitignore`** file එක මගින් `node_modules` (300MB බර files), cache සහ temp files ඔක්කොම block කරලා තියෙන්නේ.
+* ඒ නිසා ඔයා තනියම `git push` කරත් කවදාවත් අනවශ්‍ය බර files GitHub එකට යන්නේ නෑ.
+* යන්නේ ඔයා වෙනස් කරපු code එක විතරයි! 100% ක් ආරක්ෂිතයි.
+
+---
+
+## 📞 ප්‍රයෝජනවත් Shortcuts (Quick Reference)
+
+| Function | Shortcut |
+| :--- | :--- |
+| **Save File** | `Ctrl + S` |
+| **Open Terminal** | `Ctrl + ~` |
+| **Undo mistake** | `Ctrl + Z` |
+| **Search in project** | `Ctrl + Shift + F` |
+
+---
+*Created with ❤️ for Thineth Shalinda's Developer Portfolio.*
